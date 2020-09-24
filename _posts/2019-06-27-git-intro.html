@@ -1,0 +1,197 @@
+---
+layout: post
+title: "Git - Intro"
+description: "Git - Intro"
+author: jinnabalu
+categories: [ Devops, git ]
+image: assets/images/git-developer-commands.png
+featured: true
+hidden: true
+---
+
+<p>Is Git a must-have skill? Whom? All Contributor, part of the project — Developers, DevOps Engineers, System Admin, Project Manager.</p>
+<p>Git is one of the source control management tool. This is also called a distributed version control system, which provides the facility to contribute multiple collaborators together to one single repo.</p>
+
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title"><b>Clone</b></h5>
+        <p class="card-text">
+            Clone the project from the repository <br><br>
+            <code>
+                    git clone [URL_FROM_GIT_SERVER]
+                </code>
+            <br><br>
+            Examples:
+            <br><br>
+            <code>
+                git clone git@github.com:JinnaBalu/jinnabalu.github.io.git
+
+                                    <br><br>
+
+                                    git clone https://github.com/JinnaBalu/jinnabalu.github.io.git
+                                </code>
+
+        </p>
+    </div>
+</div>
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title"><b>Initialize</b></h5>
+        <p class="card-text ">
+            Initialize new local repository <br><br>
+            <code>
+                                            git init
+                                        </code>
+        </p>
+    </div>
+</div>
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title"><b>Get Latest</b></h5>
+        <code>
+                                        git pull<br><br>
+
+                                        git pull origin [BRANCH_NAME]
+                                    </code>
+    </div>
+</div>
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title"><b>Commit</b></h5>
+        <p class="card-text ">
+            Commit local changes<br><br>
+            <code>
+                                    git add --all
+
+                                    git commit -am "message"
+                                </code>
+            <br><br>Show commits history<br><br>
+            <code>
+                                    git log
+                                </code>
+            <br><br>Show history of the file<br><br>
+            <code>
+                                    git log -p [file]
+                                </code>
+            <br><br>Who changed what and when <br><br>
+            <code>
+                                    git blame [file]
+                                </code>
+        </p>
+    </div>
+</div>
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title"><b>Branch Management</b></h5>
+        <p class="card-text ">
+            List All branches<br><br>
+            <code>
+                                    git branch -av
+                                </code>
+            <br><br>Switch between Branches<br><br>
+            <code>
+                                    git checkout [BRANCH_NAME]
+                                </code>
+            <br><br>Create a new branch<br><br>
+            <code>
+                                    git checkout -b [BRANCH_NAME]
+                                </code>
+            <br><br>Delete Branch <br><br>
+            <code>
+                                    git branch -d [BRANCH_NAME]
+                                </code>
+            <br><br>Forceful Delete<br><br>
+            <code>
+                                    git branch -D [BRANCH_NAME]
+                                </code>
+            <br><br>Delete remote branch<br><br>
+            <code>
+                                    git branch -dr [BRANCH_NAME]
+                                </code>
+        </p>
+    </div>
+</div>
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title"><b>Merge changes between branches</b></h5>
+        <p>Merging changes from feature_branch to develop</p>
+        <p>Get latest from develop and merge to feature_branch</p>
+        <code>
+                                git checkout develop<br><br>
+
+                                git pull<br><br>
+
+                                git checkout feature_branch<br><br>
+
+                                git merge --no-ff origin develop<br><br>
+                            </code>
+
+        <b>
+            <p>Note : To be safe from conflict with develop(GOOD PRACTICE), we will resolve
+                in feature_branch</p>
+        </b>
+        <p>Merge feature_branch to develop</p>
+        <code>
+                                git checkout develop<br><br>
+
+                                git merge --no-ff origin feature_branch
+                            </code>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title"><b>Status</b></h5>
+        <p class="card-text ">
+            Check the status of the local changes <br><br>
+            <code>
+                                    git status<br><br>
+
+                                </code>
+            Check the status of lines changed <br><br>
+            <code>
+                                    git diff
+                                </code>
+        </p>
+    </div>
+</div>
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title"><b>Remote</b></h5>
+        <p>Listing remote</p>
+        <code>
+                                git remove -v<br><br>
+                            </code>
+        <p>Switch remote URL between https - ssh</p>
+        <code>
+                                git remote set-url origin [https://[url]]<br><br>
+                                git remote set-url origin [git@git://[url]]
+                            </code>
+    </div>
+</div>
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title"><b>Undo</b></h5>
+        <p>Discard all local changes</p>
+        <code>
+                                git reset --hard HEAD<br><br>
+                            </code>
+        <p>Discard all local changes of file</p>
+        <code>
+                                git checkout HEAD [FILE_PATH]<br><br>
+                            </code>
+        <p>Soft Reset</p>
+        <code>
+                                git reset [commit_hash] --soft<br><br>
+                            </code>
+        <p>Mixed Reset</p>
+        <code>
+                                git reset [commit_hash] --mixed<br><br>
+                                git reset [commit_hash]<br><br>
+                            </code>
+        <p>Hard Reset</p>
+        <code>
+                                git reset [commit_hash] --hard<br><br>
+                            </code>
+    </div>
+</div>
