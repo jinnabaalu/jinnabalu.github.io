@@ -5,7 +5,7 @@ description: "Git - Git cheatsheet | Devops Commands"
 author: jinnabalu
 categories: [ Devops, git ]
 image: assets/images/git-devops-commands.png
-featured: true
+featured: false
 hidden: true
 ---
 {% for block in site.data.git-commands.devops %}

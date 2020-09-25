@@ -6,7 +6,7 @@ author: jinnabalu
 categories: [ Cassandra, NoSQL, Storage ]
 tags: [red, yellow]
 image: assets/images/Cassandra_gc_grace_seconds.png
-featured: true
+featured: false
 hidden: true
 ---
 

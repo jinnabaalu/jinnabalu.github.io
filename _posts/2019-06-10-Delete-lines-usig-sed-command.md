@@ -5,7 +5,7 @@ description: "Linux - sed command"
 author: jinnabalu
 categories: [ Linux, Sed ]
 image: assets/images/sed.png
-featured: true
+featured: false
 hidden: true
 ---
 
