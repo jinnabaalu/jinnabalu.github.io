@@ -26,7 +26,8 @@ developer:
   - title: Get Latest
     description:
     command: |
-      git pull
+      git pull<br>
+      # OR <br>
       git pull origin [BRANCH_NAME]
   - title: git status
     description: Check the status of the files added, modified or deleted
@@ -38,7 +39,8 @@ developer:
     description:
     command: |
       # Commit local changes <br>
-      git add --all git commit -am "message" <br>
+      git add --all <br>
+      git commit -am "message" <br>
       # Show commits history <br>
       git log <br>
       # Show history of the file <br>
