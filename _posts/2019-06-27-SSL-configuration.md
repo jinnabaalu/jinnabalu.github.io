@@ -1,26 +1,24 @@
 ---
 layout: post
-title:  "SSL - Secure Sockets Layer"
-author: jinna
-categories: [ Security ]
-image: assets/images/Logo.png
+title: "SSL - Create CSR, CRT, Secure Sockets Layer"
+description: "SSL - Create CSR, CRT, Secure Sockets Layer"
+author: jinnabalu
+categories: [ Security, SSL, Godaddy ]
+image: assets/images/ssl.png
+featured: false
+hidden: true
 ---
-
-# What is SSL?
-
-SSL (Secure Sockets Layer) is the standard security technology for establishing an encrypted link between a web server and a browser. This link ensures that all data passed between the web server and browsers remain private and integral. SSL is an industry standard and is used by millions of websites in the protection of their online transactions with their customers.
-
-[![What is SSL](http://i.imgur.com/7YTMFQp.png)](https://vimeo.com/135666049 "What is SSL")
 
 #### Step 1. Buy the SSL from the provider,
 
-  In current docs I exaplin about godaddy, follow 
+  In current docs I explain about godaddy, follow 
 
 #### Step 2. Generate CSR
- How you generate a `.csr` depends on the type of certificate you're requesting and your operating system. 
+
+How you generate a `.csr` depends on the type of certificate you're requesting and your operating system. 
 
 - SSH into your server
-- Gnerate crt using openssl with following command
+- Generate crt using openssl with following command
 ```bash
 openssl req -new -newkey rsa:2048 -nodes -keyout example.key -out example.csr
 ```
@@ -37,7 +35,7 @@ Above step will generate the csr file copy that into the ssl provider and get th
 
 - After generating the `.crt` file, you will download a zipfile contrains the
 
-#### Step 4. Concatinate the intermidiate and budle .crt files to generate 
+#### Step 4. Concatenate the intermediate and bundle .crt files to generate 
 
 A common practice, then, is to bundle these all up into one file -- your certificate, then the signing certificates. But since they aren't easily distinguished, it sometimes happens that someone accidentally puts them in the other order -- signing certs, then the final cert -- without noticing. In that case, your cert will not match your key.
 
