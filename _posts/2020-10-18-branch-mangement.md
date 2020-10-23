@@ -1,3 +1,14 @@
+---
+layout: post
+title: "Git - Branch Management"
+description: "Git - Branch Management"
+author: jinnabalu
+categories: [ Devops, git ]
+image: assets/images/git_branch_management.png
+featured: false
+hidden: true
+---
+
 # Single branch for production and development
 
 Consider *master* branch as the single branch for both prod and dev

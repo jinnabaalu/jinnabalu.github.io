@@ -1,9 +1,12 @@
 ---
 layout: post
-title:  "Elasticsearch Single Node using Docker Compose"
+title: "Elasticsearch - Single Node using Docker Compose"
+description: "Elasticsearch - Single Node using Docker Compose"
 author: jinnabalu
 categories: [ Elasticsearch, Docker ]
-image: assets/images/16.jpg
+image: assets/images/es_single_node.png
+featured: false
+hidden: true
 ---
 
 ## Preface

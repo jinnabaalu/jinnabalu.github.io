@@ -1,5 +1,13 @@
-# Committing files
-
+---
+layout: post
+title: "Git - Commit Files"
+description: "Git - Commit Files"
+author: jinnabalu
+categories: [ Devops, git ]
+image: assets/images/git_commit.png
+featured: false
+hidden: true
+---
 ## Status
 
 ```bash

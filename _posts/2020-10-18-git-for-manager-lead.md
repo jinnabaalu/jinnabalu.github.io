@@ -1,4 +1,13 @@
-# Git for Project Lead/Manager
+---
+layout: post
+title: "Git - Project Lead/Manager"
+description: "Git - Project Lead/Manager"
+author: jinnabalu
+categories: [ Devops, git ]
+image: assets/images/git_manager.png
+featured: false
+hidden: true
+---
 
 1. Get count of branches
 
