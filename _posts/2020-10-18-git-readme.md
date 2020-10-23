@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Git - Reads"
-description: "Git - Reads"
+title: "Git - Cheat Sheet"
+description: "Git - Cheat Sheet"
 author: jinnabalu
 categories: [ Devops, git ]
 image: assets/images/git.jpg
@@ -11,23 +11,21 @@ hidden: true
 
 # Git Cheat Sheet
 
-![Components of Cassandra](./images/git-logo.png)
+## USE CASES
 
-    ## USE CASES
-
-- [home](https://github.com/JinnaBalu/GitCheatSheet#clone-the-existing-repositoty)
-- [git init](https://github.com/JinnaBalu/GitCheatSheet/blob/master/use-cases/git-init.md#git-init)
-- [push local changes to repository](https://github.com/JinnaBalu/GitCheatSheet/blob/master/use-cases/git-commit-file.md#committing-files)
-- [create new branch](https://github.com/JinnaBalu/GitCheatSheet/blob/master/use-cases/create-branch.md#create-branch)
-- [branch management](https://github.com/JinnaBalu/GitCheatSheet/blob/master/use-cases/branch-mangement.md#single-branch-for-production-and-development)
-- [common git commands](https://github.com/JinnaBalu/GitCheatSheet/blob/master/use-cases/commonly-used-commands.md#common-commands-using-git)
-- [delete commits](https://github.com/JinnaBalu/GitCheatSheet/blob/master/use-cases/delete-commits.md#remove-the-last-commitcommits-using-reset)
-- [git merge](https://github.com/JinnaBalu/GitCheatSheet/blob/master/use-cases/git-merge.md#git-merge)
-- [git reset](https://github.com/JinnaBalu/GitCheatSheet/blob/master/use-cases/reset.md#git-reset)
-- [git for project leads/manager](https://github.com/JinnaBalu/GitCheatSheet/blob/master/use-cases/git-for-manager-lead.md#git-for-project-leadmanager)
-- [switch remote url from HTTPS to SSH](https://github.com/JinnaBalu/GitCheatSheet/blob/master/use-cases/switch-remote-url-http-ssh.md#switching-remote-urls-from-https-to-ssh)
+- [git init](https://jinnabalu.tech/git-init/)
+- [push local changes to repository](https://jinnabalu.tech/git-commit-file/)
+- [create new branch](https://jinnabalu.tech/create-branch/)
+- [branch management](https://jinnabalu.tech/branch-mangement/)
+- [common git commands](https://jinnabalu.tech/commonly-used-commands/)
+- [git merge](https://jinnabalu.tech/git-merge/)
+- [git reset](https://jinnabalu.tech/reset-commits/)
+- [git for project leads/manager](https://jinnabalu.tech/git-for-manager-lead/)
+- [switch remote url from HTTPS to SSH](https://jinnabalu.tech/switch-remote-url-http-ssh/)
 
 
 ### SSH association with repository
 
-- [git push with ssh](https://github.com/JinnaBalu/GitCheatSheet/blob/master/use-cases/git-push-with-ssh.md#setup-git-push-with-ssh)
+- [git push with ssh](https://jinnabalu.tech/git-push-with-ssh/)
+- [git devops commands](https://jinnabalu.tech/Git-Cheet-Sheet/)
+- [git basics for a developer](https://jinnabalu.tech/git-developer-commands/)

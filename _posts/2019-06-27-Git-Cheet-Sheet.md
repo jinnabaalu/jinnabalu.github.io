@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Git - Git cheatsheet | Devops Commands"
-description: "Git - Git cheatsheet | Devops Commands"
+title: "Git - Git cheat sheet | Devops Commands"
+description: "Git - Git cheat sheet | Devops Commands"
 author: jinnabalu
 categories: [ Devops, git ]
 image: assets/images/git-devops-commands.png
