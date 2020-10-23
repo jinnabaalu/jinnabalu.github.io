@@ -61,11 +61,11 @@ docker run \
   --net=host \
   --rm \
   confluentinc/cp-kafka:4.0.0 \
-  kafka-topics --zookeeper localhost:22181 --topic candidate_search_query --describe
+  kafka-topics --zookeeper localhost:22181 --topic <TOPC_NAME> --describe
 
 
 
-docker run --net=host --rm confluentinc/cp-kafka:4.0.0 kafka-consumer-groups --bootstrap-server 192.31.2.5:19092,192.31.3.33:29092,192.31.4.11:39092 --group datainfrastrcuture-candidate-group --describe
+docker run --net=host --rm confluentinc/cp-kafka:4.0.0 kafka-consumer-groups --bootstrap-server 172.168.2.5:19092,172.168.0.1:29092,172.168.0.1:39092 --group <CONSUMER_GROUP_NAME> --describe
   
   
 ## expected sample output
@@ -79,9 +79,9 @@ Topic: signals  Partition: 2    Leader: 2   Replicas: 0,1,2 Isr: 2,0,1
 ## reset-offsets
 
 ```bash
-docker run --net=host --rm confluentinc/cp-kafka:4.0.0 kafka-consumer-groups --bootstrap-server 192.31.2.11:19092,192.31.3.33:29092,192.31.4.11:39092 --group datainfrastrcuture-candidate-group --reset-offsets --to-earliest --topic datainfrastructure_candidate_submission_json --execute
+docker run --net=host --rm confluentinc/cp-kafka:4.0.0 kafka-consumer-groups --bootstrap-server 172.168.0.0:19092,172.168.0.1:29092,172.168.0.1:39092 --group <CONSUMER_GROUP_NAME> --reset-offsets --to-earliest --topic <TOPIC_NAME> --execute
 
-docker run --net=host --rm confluentinc/cp-kafka:4.0.0 kafka-consumer-groups --bootstrap-server 192.31.2.11:19092,192.31.3.33:29092,192.31.4.11:39092 --group datainfrastrcuture-candidate-group --reset-offsets --to-earliest --topic datainfrastructure_candidate_mapping_json --execute
+docker run --net=host --rm confluentinc/cp-kafka:4.0.0 kafka-consumer-groups --bootstrap-server 172.168.0.0:19092,172.168.0.1:29092,172.168.0.1:39092 --group <CONSUMER_GROUP_NAME> --reset-offsets --to-earliest --topic <TOPIC_NAME> --execute
 ```
 
 
@@ -89,14 +89,5 @@ docker run --net=host --rm confluentinc/cp-kafka:4.0.0 kafka-consumer-groups --b
 ### Describe the Topic/Group
 
 ```bash
-docker run --net=host --rm confluentinc/cp-kafka:4.0.0 kafka-consumer-groups --bootstrap-server 192.31.2.11:19092,192.31.3.33:29092,192.31.4.11:39092 --group datainfrastrcuture-candidate-group --describe
+docker run --net=host --rm confluentinc/cp-kafka:4.0.0 kafka-consumer-groups --bootstrap-server 172.168.0.0:19092,172.168.0.1:29092,172.168.0.1:39092 --group <CONSUMER_GROUP_NAME> --describe
 ```
-
-
-
-curl -XGET -u elastic:Adatavance#448  '192.31.2.65:9200/di_candidate_index/_search?size=5' -H 'Content-Type: application/json' -d '
-{
-    "query" : {
-        "match_all" : {}
-    }
-}'
