@@ -1,5 +1,15 @@
-#  Kafka Operations
+---
+layout: post
+title: "Kafka - Ops"
+description: "Kafka - Ops"
+author: jinnabalu
+categories: [ Devops, Kafka, Docker ]
+image: assets/images/kafka.svg
+featured: false
+hidden: true
+---
 
+#  Kafka Operations
 
 - Create a topic 
 
