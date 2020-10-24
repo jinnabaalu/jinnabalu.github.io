@@ -42,7 +42,7 @@ services:
         soft: -1
         hard: -1
     volumes:
-      - wsesdata:/usr/share/elasticsearch/data
+      - vibhuviesdata:/usr/share/elasticsearch/data
     ports:
       - 9200:9200
       - 9300:9300
@@ -68,7 +68,7 @@ services:
     restart: "unless-stopped"
     
 volumes:
-  wsesdata:
+  vibhuviesdata:
     driver: local
 
 networks:

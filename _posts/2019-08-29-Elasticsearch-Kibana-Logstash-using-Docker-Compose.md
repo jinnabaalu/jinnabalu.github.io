@@ -44,14 +44,14 @@ services:
         soft: -1
         hard: -1
     volumes:
-      - wsesdata:/usr/share/elasticsearch/data
+      - vibhuviesdata:/usr/share/elasticsearch/data
     ports:
       - 9200:9200
     networks:
       - esnet
     
 volumes:
-  wsesdata:
+  vibhuviesdata:
     driver: local
 
 networks:
