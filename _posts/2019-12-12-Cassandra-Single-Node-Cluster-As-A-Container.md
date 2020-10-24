@@ -1,9 +1,12 @@
 ---
-title:  "Cassandra single node cluster as a container"
-metadate: "hide"
-categories: [ Cassandra, NoSQL ]
-tags: [ Cassandra ]
-image: "assets/images/cassandra.svg"
+layout: post
+title: "Cassandra - Cassandra single node cluster as a container"
+description: "Cassandra - Single Node using Docker Compose"
+author: jinnabalu
+categories: [ Cassandra, Docker, NOSQL ]
+image: assets/images/Cassandra_single_node.png
+featured: false
+hidden: true
 ---
 
 
@@ -11,15 +14,6 @@ image: "assets/images/cassandra.svg"
 - How to run cassandra as a single node cluster?
 
 To answer the above, Docker provides a `Docker Official Images` for Apache Cassandra, is an open-source distributed storage system.
-
-## Quick reference 
-
-#### Get Help From
-
-- [The Docker Community Forums](https://forums.docker.com/)
-- [The Docker Community Slack](http://dockr.ly/slack)
-- [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
-- [Ask me Your Questions - Bot](https://jinnabalu.github.io/resume/)
 
 ## Create the docker-compose
 
@@ -55,6 +49,6 @@ services:
     
 ```
 
-[![Try in PWD](https://cdn.rawgit.com/play-with-docker/stacks/cff22438/assets/images/button.png)](http://play-with-docker.com?stack=https://raw.githubusercontent.com/JinnaBalu/cassandra/master/single-node-cluster/cassandra.yml)
+[![Try in PWD](https://cdn.rawgit.com/play-with-docker/stacks/cff22438/assets/images/button.png)](http://play-with-docker.com?stack=https://raw.githubusercontent.com/JinnaBalu/cassandra/master/single-node-cluster/cassandra.yml){:target="_blank"}
 
-- To maintain the persistancy of the data uncomment the volumes in the service and respective Volume 
+- To maintain the persistency of the data uncomment the volumes in the service and respective Volume 
