@@ -31,7 +31,7 @@ To know more about the disk allocation [read here](https://www.elastic.co/guide/
 
 ### Priority #1
 
-In Production Elasticsearch Cluster deleting duplicates data or updating any of the above defaults is bad practice as we are in hurry to resolve the issue on fly. Deleting any data decision takes ample amount of time. Take an action of increasing the disk space before cluster goes into *READ ONLY* node.
+In Production Elasticsearch Cluster deleting duplicates data or updating any of the above defaults is bad practice as we are in hurry to resolve the issue on fly. Deleting any data decision takes ample amount of time. Take an action of increasing the disk space before cluster goes into *READ ONLY* node. Temporarily update `threshold_enabled` value to false and increase the disk space.
 
 > For monitoring or staging servers we can go for the below priorities. Don't read Priority #2 and Priority #3, if you are doing it on production server, we make mistakes, deleting any production index cost more, be conscious doing any of the deleting activities.
 
