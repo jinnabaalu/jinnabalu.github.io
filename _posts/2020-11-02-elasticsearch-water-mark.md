@@ -1,15 +1,13 @@
 ---
 layout: post
-title: "Elasticsearch - Disk Space is too low/disk.watermark thresholds/FORBIDDEN/12/index read-only"
+title: "Elasticsearch Disk Space is too low"
 description: "Elasticsearch - [FORBIDDEN/12/index read-only / allow delete (api)];];"
 author: jinnabalu
-categories: [ Elasticsearch ]
-image: assets/images/Elasticsearch_watermark.png
-featured: false
-hidden: true
+categories: [ ElasticsearchIssues ]
+image: assets/images/Elasticsearch_watermark.pngs
 ---
 
-# Fix the FORBIDDEN Read-Only / Allow Delete Error for Elasticsearch API Requests
+*Fix the FORBIDDEN Read-Only / Allow Delete Error for Elasticsearch API Requests*
 
 Elasticsearch considers the available disk space on a node before deciding whether to allocate new shards to that node or to actively relocate shards away from that node.
 
@@ -66,6 +64,7 @@ curl -X PUT "localhost:9200/_cluster/settings?pretty" -H 'Content-Type: applicat
 '
 
 # Here the above example works for indexing smaller number of documents/sec in dev or test
+
 ```
 #### Percentage values
 
@@ -79,5 +78,6 @@ curl -X PUT "localhost:9200/_cluster/settings?pretty" -H 'Content-Type: applicat
   }
 }
 '
+```
 
 > Note: Enable the `cluster.routing.allocation.disk.threshold_enabled: true`, when the cluster is stable and normal, so the warnings will be thrown based on the disk usage. Disabling leads to stop the elasticsearch cluster.
