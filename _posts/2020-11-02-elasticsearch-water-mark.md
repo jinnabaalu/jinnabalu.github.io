@@ -23,7 +23,7 @@ curl -X PUT "localhost:9200/twitter/_settings?pretty" -H 'Content-Type: applicat
 
 We can customize the watermark level default values to the required, here is the default values
 
-- `cluster.routing.allocation.disk.watermark.low: (Default 85%)` - 
+- `cluster.routing.allocation.disk.watermark.low: (Default 85%)`
 - `cluster.routing.allocation.disk.watermark.high: (Default 90%)` 
 - `cluster.routing.allocation.disk.watermark.flood_stage: (Default 95%)`
 
