@@ -80,4 +80,4 @@ curl -X PUT "localhost:9200/_cluster/settings?pretty" -H 'Content-Type: applicat
 '
 ```
 
-> Note: Enable the `cluster.routing.allocation.disk.threshold_enabled: true`, when the cluster is stable and normal, so the warnings will be thrown based on the disk usage. Disabling leads to stop the elasticsearch cluster.
+> Note: Enable the `cluster.routing.allocation.disk.threshold_enabled: true`, when the cluster is stable and health is green, so the warnings will be thrown based on the disk usage. Disabling leads to stop the elasticsearch cluster.
