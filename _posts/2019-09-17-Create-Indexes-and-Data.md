@@ -7,12 +7,7 @@ tags: [ Elasticsearch ]
 image: "assets/images/elasticsearch.svg"
 ---
 
-## Preface
-
-This post assumes that you have some basic understanding of Docker, Docker Compose, and the key components used in the docker ecosystem. Get up to speed, with the [Prepare Your Docker Eenvironment](https://docs.docker.com/get-started/#prepare-your-docker-environment) section of Docker docs.
-
-1. Install [Docker](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
-2. Install [docker-compose](https://docs.docker.com/compose/install/)
+{% include docker-prerequisites.md %}
 3. Install Elasticsearch or [Run Elasticsearch container](https://github.com/JinnaBalu/elasticsearch/blob/master/2019-08-29-Elasticsearch-Single-Node-using-Docker-Compose.md)
 
 

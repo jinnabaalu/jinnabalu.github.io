@@ -5,12 +5,7 @@ description: Deploying the elasticsearch and Kibana as docker containers
 image: "assets/images/elasticsearch.svg"
 ---
 
-## Preface
-
-This post assumes that you have some basic understanding of Docker, Docker Compose, and the key components used in the docker ecosystem. Get up to speed, with the [Prepare Your Docker Eenvironment](https://docs.docker.com/get-started/#prepare-your-docker-environment) section of Docker docs.
-
-1. Install [Docker](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
-2. install [docker-compose](https://docs.docker.com/compose/install/)
+{% include docker-prerequisites.md %}
 
 ## Deploy Elasticsearch Single node with docker-compose
 The ELK Stack (Elasticsearch, Logstash and Kibana) can be installed on a variety of different operating systems and in various different setups. 

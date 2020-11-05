@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Deploy Static HTML Website as Container"
+title:  "Dockerise HTML"
 description: "Running the Static HTML webpages as container on docker"
 author: jinna
-categories: [ Application ]
+categories: [ Dockerization ]
 image: assets/images/html-5.svg
 ---
 
