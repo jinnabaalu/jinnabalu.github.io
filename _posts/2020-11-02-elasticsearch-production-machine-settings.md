@@ -8,8 +8,6 @@ image: assets/images/elasticsearch_system_configuration.png
 
 *Fix the FORBIDDEN Read-Only / Allow Delete Error for Elasticsearch API Requests*
 
-Elasticsearch considers the available disk space on a node before deciding whether to allocate new shards to that node or to actively relocate shards away from that node.
-
 Elasticsearch reads the disk space, makes all the indices into *READ ONLY* when the "Cluster Settings" are default and reaches the watermark levels. We can disable this by updating the ` disk allocation decider` as follows
 
 ```bash
