@@ -1,6 +1,10 @@
 ---
-title: Securing Elasticsearch Cluster - Part 1
-description: Securing Elasticsearch Cluster
+layout: post
+title: "Securing Elasticsearch Cluster - Part 1"
+description: "Securing Elasticsearch Cluster"
+author: jinnabalu
+categories: [ Elasticsearch, Security ]
+image: assets/images/Elasticsearch_watermark.png
 ---
 
 # Securing Elasticsearch Cluster Before and After 6.8/7.1

@@ -38,7 +38,7 @@ volumes:
   data-postgresql:
 ```
 
-- Set the custom volume for the postgres persistency, update the docker volume of the above yml with the folowing
+- Set the custom volume for the postgres persistency, update the docker volume of the above yml with the following
 
 ```yml
 ...
