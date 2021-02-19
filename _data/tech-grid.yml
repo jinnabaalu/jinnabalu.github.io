@@ -1,5 +1,0 @@
-technology:
-  - name: Cassandra
-    url: "cassandra-grid"
-    image_url: "/assets/images/cassandra.png"
-    title_description: "Containerize cassandra and play with cassandra"

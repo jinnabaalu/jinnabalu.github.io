@@ -4,6 +4,7 @@ metadate: "hide"
 categories: [ Cassandra, NoSQL ]
 tags: [ Cassandra ]
 image: "assets/images/cassandra.svg"
+layout: post
 ---
 
 
