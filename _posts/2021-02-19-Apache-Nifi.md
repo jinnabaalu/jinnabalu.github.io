@@ -42,6 +42,4 @@ services:
     
 ```
 
-[![Try in PWD](https://cdn.rawgit.com/play-with-docker/stacks/cff22438/assets/images/button.png)](http://play-with-docker.com?stack=https://raw.githubusercontent.com/JinnaBalu/cassandra/master/single-node-cluster/cassandra.yml){:target="_blank"}
-
-- To maintain the persistency of the data uncomment the volumes in the service and respective Volume 
+[![Try in PWD](https://cdn.rawgit.com/play-with-docker/stacks/cff22438/assets/images/button.png)](http://play-with-docker.com?stack=https://raw.githubusercontent.com/JinnaBalu/infinite-stack/master/nifi/docker-compose.yml){:target="_blank"}
