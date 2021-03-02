@@ -1,17 +1,17 @@
 ---
 layout: post
-title:  "Docker - Dockerise the nodejs application"
+title:  "Docker - dockerize the nodejs application"
 author: jinnabalu
 categories: [ Application, NodeJs, Container ]
 image: assets/images/docker_nodejs.jpeg
-description: "Create a nodejs application | Dockerise nodejs application"
+description: "Create a nodejs application | Dockerize nodejs application"
 featured: false
 hidden: true
 ---
 
-Main goal of this story is to dockerise the nodejs application. Assuming that you have come here after installing nodejs and docker.
+The main goal of this story is to dockerize the nodejs application. Assuming that you have come here after installing nodejs and docker.
 
-Here is [github repo](https://github.com/JinnaBalu/dockerise-nodejs)
+Here is the [Github repo](https://github.com/JinnaBalu/dockerise-nodejs)
 
 Check with the installations of nodejs and docker version
 
@@ -21,7 +21,7 @@ docker version
 ```
 
 1. Create a nodejs application (Skip this if you have running app)
-2. Dockerise nodejs application
+2. Dockerize nodejs application
 
 ## Create a folder name app and use the same folder to create the nodejs application.
 
