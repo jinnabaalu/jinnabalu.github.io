@@ -7,44 +7,88 @@ categories: [ Docker, Volume ]
 image: assets/images/docker_volume.png
 ---
 
-Container uses and generates data folders which are available for container but not to the host machine. When the container gets restarted or crashed the data generated inside is deleted permanently. Docker volumes is a process of saving the data to the host machine from container.
+Container uses and generates data folders that are available for the container but not to the host machine. When the container gets restarted or crashed the data generated inside is deleted permanently. Docker volumes is a process of saving the data to the host machine from the container.
 
-### Docker data one time copy
+### Docker Volume COPY | Docker data one time copy
 
-Get the folder copied from container to host machine, this option useful for one time copy, but not recommended for the databases which needs the stateful behavior. Using `docker cp` we can copy the docker container volume to the host machine. 
+Get the folder copied from container to host machine, this option useful for one-time copy, but not recommended for the databases which need the stateful behavior. Using docker cp we can copy the docker container volume to the host machine. 
 
-`docker cp <CONTAINER_ID>:<PATH_OF_CONTAINER_DIR_TO_COPY> <DESTINATION_PATH_HOST_MACHINE>`
+```bash
+docker cp <CONTAINER_ID>:<PATH_OF_CONTAINER_DIR_TO_COPY> <DESTINATION_PATH_HOST_MACHINE>
+```
 
-example: `docker cp /etc/nginx/nginx.conf $PWD/`
+example:
 
-### Docker Volume
+```bash
+docker cp /etc/nginx/nginx.conf $PWD/`
+```
 
-Docker volume is a process of mounting the container volume to the host directory. This can be done in three ways. 
+> NOTE: The issue with the above approach is, it will not persists the volume or file or dir, as you remove the container it will be lost. This is not recommended for volume persistency dynamically.
+
+### Volume Mounting | Docker Volume 
+
+Docker volume is a process of mounting the container volume to the host directory. This can be done in three ways.
+
 1. Anonymous Volumes
 2. Named Volumes
-3. Named Bind Volumes
-
-Before getting hands on the volumes lets understand the `docker volume` command
-
-```bash
-docker volumes
-```
-Output:
-
-```bash
-Usage:	docker volume COMMAND
-
-Manage volumes
-
-Commands:
-  create      Create a volume
-  inspect     Display detailed information on one or more volumes
-  ls          List volumes
-  prune       Remove all unused local volumes
-  rm          Remove one or more volumes
-
-Run 'docker volume COMMAND --help' for more information on a command.
-```
+3. Named Bind Volumes Or Host Volumes
 
 #### 1. Anonymous Volumes
 
+The location of the data mounted is managed by docker. It is very difficult to refer to the same volume. We can identify the volumes used by containers by using the container inspection. To create an anonymous docker volume run 
+
+```bash
+docker run -v /app nginx:1.11.8-alpine
+```
+#### 2. Named Volumes
+
+Named volumes are defined by the user but the location of the data is managed by docker. Referring to named volumes is very easy compared to anonymous volumes. 
+
+We can do this in two ways creating a docker volume and referring to it while running the container with the `docker run` command. 
+
+
+```bash
+docker volume create vibhuvi_data
+docker run -v vibhuvi_data:/usr/share/app nginx:1.11.8-alpine
+```
+
+We can achieve both above commands within one `docker-compose.yml`
+
+```yml
+version: '3'
+services:
+  nginx:
+    image: nginx:1.11.8-alpine
+    ports:
+      - "8081:80"
+    volumes:
+      - vibhuvi_data:/usr/share/app
+volumes:
+  vibhuvi_data:
+```
+
+> Note : Deleting the named volumes will delete the data as the data location is managed by docker.
+
+#### 3. Named Bind Volumes Or Host Volumes
+
+Named volumes binding or mounting to the custom directory path of the host machine. Docker volume location is defined by the user.
+
+```bash
+version: '3'
+services:
+  nginx:
+    image: nginx:1.11.8-alpine
+    ports:
+      - "8081:80"
+    volumes:
+      - vibhuvi_data:/usr/share/app
+volumes:
+  vibhuvi_data:
+    driver: local
+    driver_opts:
+       o: bind
+       type: none
+       device: /home/vibhuvi/data/app
+```
+
+Volumes help save data across restarts of your docker containers. If you need to use a volume, consider the difference between the various kinds before starting development.
